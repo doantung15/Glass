@@ -29,23 +29,55 @@ namespace GlassStore
             string[] ports = SerialPort.GetPortNames();
             comboBox1.Items.AddRange (ports);
         }
-        private void openComport()
+        private void OpenComport_Aduino()
         {
             try
             {
-                if(comboBox1.Text==""||comboBox2.Text=="")
+                if(comboBox1.Text==""||cbxComport.Text=="")
                 {
                     MessageBox.Show("select");
                 }
                 else
                 {
-                    serialPort1.PortName = comboBox1.Text;
-                    serialPort1.BaudRate = Convert.ToInt32(comboBox2.Text);
-                    serialPort1.DataBits = Convert.ToInt32(comboBox3.Text);
-                    serialPort1.StopBits = (StopBits)Enum.Parse(typeof(StopBits), comboBox4.Text);
+                    serialPort1.PortName = cbxComport.Text;
+                    serialPort1.BaudRate = Convert.ToInt32(cbxbaurate.Text);
+                    serialPort1.DataBits = Convert.ToInt32(cbxdatabit.Text);
+                    serialPort1.StopBits = (StopBits)Enum.Parse(typeof(StopBits), cbxstopbit.Text);
+                    serialPort1.Parity = (Parity)Enum.Parse(typeof(Parity), cbxparity.Text);
 
+                    serialPort1.Open();
 
                 }
+            }
+            catch(UnauthorizedAccessException)
+            {
+                MessageBox.Show("error");
+            }
+        }
+
+        private void OpenComport_BarcodeGun()
+        {
+            try
+            {
+                if (comboBox1.Text == "" || cbxComport.Text == "")
+                {
+                    MessageBox.Show("select");
+                }
+                else
+                {
+                    serialPort2.PortName = cbxComport.Text;
+                    serialPort2.BaudRate = Convert.ToInt32(cbxbaurate.Text);
+                    serialPort2.DataBits = Convert.ToInt32(cbxdatabit.Text);
+                    serialPort2.StopBits = (StopBits)Enum.Parse(typeof(StopBits), cbxstopbit.Text);
+                    serialPort2.Parity = (Parity)Enum.Parse(typeof(Parity), cbxparity.Text);
+
+                    serialPort2.Open();
+
+                }
+            }
+            catch (UnauthorizedAccessException)
+            {
+                MessageBox.Show("error");
             }
         }
 
