@@ -94,9 +94,9 @@
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txbShowB = new System.Windows.Forms.TextBox();
             this.btnCB = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txbShowA = new System.Windows.Forms.TextBox();
             this.cbxparityB = new System.Windows.Forms.ComboBox();
             this.btnCA = new System.Windows.Forms.Button();
             this.cbxStopB = new System.Windows.Forms.ComboBox();
@@ -110,6 +110,7 @@
             this.cbxComport = new System.Windows.Forms.ComboBox();
             this.serialPort1 = new System.IO.Ports.SerialPort(this.components);
             this.serialPort2 = new System.IO.Ports.SerialPort(this.components);
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.tabControl1.SuspendLayout();
             this.Search.SuspendLayout();
             this.ACTION.SuspendLayout();
@@ -841,9 +842,9 @@
             // 
             // tabPage4
             // 
-            this.tabPage4.Controls.Add(this.textBox2);
+            this.tabPage4.Controls.Add(this.txbShowB);
             this.tabPage4.Controls.Add(this.btnCB);
-            this.tabPage4.Controls.Add(this.textBox1);
+            this.tabPage4.Controls.Add(this.txbShowA);
             this.tabPage4.Controls.Add(this.cbxparityB);
             this.tabPage4.Controls.Add(this.btnCA);
             this.tabPage4.Controls.Add(this.cbxStopB);
@@ -862,13 +863,13 @@
             this.tabPage4.Text = "tabPage4";
             this.tabPage4.UseVisualStyleBackColor = true;
             // 
-            // textBox2
+            // txbShowB
             // 
-            this.textBox2.Location = new System.Drawing.Point(402, 310);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(225, 227);
-            this.textBox2.TabIndex = 2;
+            this.txbShowB.Location = new System.Drawing.Point(402, 310);
+            this.txbShowB.Multiline = true;
+            this.txbShowB.Name = "txbShowB";
+            this.txbShowB.Size = new System.Drawing.Size(225, 227);
+            this.txbShowB.TabIndex = 2;
             // 
             // btnCB
             // 
@@ -879,13 +880,13 @@
             this.btnCB.Text = "ConnectB";
             this.btnCB.UseVisualStyleBackColor = true;
             // 
-            // textBox1
+            // txbShowA
             // 
-            this.textBox1.Location = new System.Drawing.Point(402, 32);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(225, 227);
-            this.textBox1.TabIndex = 2;
+            this.txbShowA.Location = new System.Drawing.Point(402, 32);
+            this.txbShowA.Multiline = true;
+            this.txbShowA.Name = "txbShowA";
+            this.txbShowA.Size = new System.Drawing.Size(225, 227);
+            this.txbShowA.TabIndex = 2;
             // 
             // cbxparityB
             // 
@@ -906,6 +907,7 @@
             this.btnCA.TabIndex = 1;
             this.btnCA.Text = "ConnectA";
             this.btnCA.UseVisualStyleBackColor = true;
+            this.btnCA.Click += new System.EventHandler(this.btnCA_Click);
             // 
             // cbxStopB
             // 
@@ -1004,6 +1006,10 @@
             this.cbxComport.Size = new System.Drawing.Size(141, 21);
             this.cbxComport.TabIndex = 0;
             // 
+            // timer1
+            // 
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1100,20 +1106,21 @@
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.TabPage tabPage3;
         private System.Windows.Forms.TabPage tabPage4;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txbShowA;
         private System.Windows.Forms.Button btnCA;
         private System.Windows.Forms.ComboBox cbxstopbit;
         private System.Windows.Forms.ComboBox cbxdatabit;
         private System.Windows.Forms.ComboBox cbxbaurate;
         private System.Windows.Forms.ComboBox cbxComport;
         private System.Windows.Forms.ComboBox cbxparity;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txbShowB;
         private System.Windows.Forms.Button btnCB;
         private System.Windows.Forms.ComboBox cbxparityB;
         private System.Windows.Forms.ComboBox cbxStopB;
         private System.Windows.Forms.ComboBox cbxdataB;
         private System.Windows.Forms.ComboBox cbxBauB;
         private System.Windows.Forms.ComboBox cbxcomB;
+        private System.Windows.Forms.Timer timer1;
     }
 }
 

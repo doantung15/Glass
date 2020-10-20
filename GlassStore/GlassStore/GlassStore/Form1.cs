@@ -12,6 +12,7 @@ using System.Windows.Forms;
 using System.Data.OleDb;
 using NModbus.Serial;
 using System.IO;
+using NModbus;
 
 namespace GlassStore
 {
@@ -19,23 +20,24 @@ namespace GlassStore
     {
 
         DataTableCollection tableCollection;
-
+        StringBuilder data = new StringBuilder();
+        IModbusSlave slave;
+        IModbusMaster master;
         public Form1()
         {
             InitializeComponent();
-            
+            Comport();
         }
 
         private void Comport()
         {
             string[] ports = SerialPort.GetPortNames();
-            comboBox1.Items.AddRange (ports);
+            cbxComport.Items.AddRange (ports);
         }
         private void OpenComport_Aduino()
         {
-            try
-            {
-                if(comboBox1.Text==""||cbxComport.Text=="")
+ 
+                if(cbxComport.Text==""||cbxbaurate.Text=="")
                 {
                     MessageBox.Show("select");
                 }
@@ -43,17 +45,28 @@ namespace GlassStore
                 {
                     serialPort1.PortName = cbxComport.Text;
                     serialPort1.BaudRate = Convert.ToInt32(cbxbaurate.Text);
-                    serialPort1.DataBits = Convert.ToInt32(cbxdatabit.Text);
-                    serialPort1.StopBits = (StopBits)Enum.Parse(typeof(StopBits), cbxstopbit.Text);
-                    serialPort1.Parity = (Parity)Enum.Parse(typeof(Parity), cbxparity.Text);
+                    //serialPort1.DataBits = Convert.ToInt32(cbxdatabit.Text);
+                    //serialPort1.StopBits = (StopBits)Enum.Parse(typeof(StopBits), cbxstopbit.Text);
+                    //serialPort1.Parity = (Parity)Enum.Parse(typeof(Parity), cbxparity.Text);
+                    serialPort1.WriteTimeout = 500;
+                    serialPort1.ReadTimeout = 500;
 
                     serialPort1.Open();
+                    var factory = new ModbusFactory();
+                    IModbusMaster master = factory.CreateRtuMaster(serialPort1);
+
 
                 }
-            }
-            catch(UnauthorizedAccessException)
+
+        }
+
+        private void Modbus(byte slaveId,ushort startAddress,ushort numRegisters)
+        {            
+            ushort[] registers = master.ReadHoldingRegisters(slaveId, startAddress, numRegisters);
+
+            for (int i = 0; i < numRegisters; i++)
             {
-                MessageBox.Show("error");
+               data.Append($"Register {startAddress + i}={registers[i]}");
             }
         }
 
@@ -112,6 +125,21 @@ namespace GlassStore
         {
             DataTable dt = tableCollection[comboBox1.SelectedItem.ToString()];
             dataGridView2.DataSource = dt;
+        }
+
+        private void btnCA_Click(object sender, EventArgs e)
+        {
+
+            OpenComport_Aduino();
+            
+            
+
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            Modbus(3, 0, 10);
+            txbShowA.Text = Convert.ToString(data);
         }
     }
 }
