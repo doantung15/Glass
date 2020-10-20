@@ -90,37 +90,26 @@
             this.station4 = new System.Windows.Forms.Button();
             this.station3 = new System.Windows.Forms.Button();
             this.station21 = new System.Windows.Forms.Button();
-            this.serialPort1 = new System.IO.Ports.SerialPort(this.components);
-            this.serialPort2 = new System.IO.Ports.SerialPort(this.components);
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem5 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem6 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem7 = new System.Windows.Forms.ToolStripMenuItem();
-            this.connectToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.aToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.aToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.aToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
-            this.aToolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.cbxComport = new System.Windows.Forms.ComboBox();
-            this.cbxbaurate = new System.Windows.Forms.ComboBox();
-            this.cbxdatabit = new System.Windows.Forms.ComboBox();
-            this.cbxstopbit = new System.Windows.Forms.ComboBox();
-            this.btnCA = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.cbxparity = new System.Windows.Forms.ComboBox();
-            this.cbxcomB = new System.Windows.Forms.ComboBox();
-            this.cbxBauB = new System.Windows.Forms.ComboBox();
-            this.cbxdataB = new System.Windows.Forms.ComboBox();
-            this.cbxStopB = new System.Windows.Forms.ComboBox();
-            this.cbxparityB = new System.Windows.Forms.ComboBox();
-            this.btnCB = new System.Windows.Forms.Button();
             this.textBox2 = new System.Windows.Forms.TextBox();
+            this.btnCB = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.cbxparityB = new System.Windows.Forms.ComboBox();
+            this.btnCA = new System.Windows.Forms.Button();
+            this.cbxStopB = new System.Windows.Forms.ComboBox();
+            this.cbxparity = new System.Windows.Forms.ComboBox();
+            this.cbxdataB = new System.Windows.Forms.ComboBox();
+            this.cbxstopbit = new System.Windows.Forms.ComboBox();
+            this.cbxBauB = new System.Windows.Forms.ComboBox();
+            this.cbxdatabit = new System.Windows.Forms.ComboBox();
+            this.cbxcomB = new System.Windows.Forms.ComboBox();
+            this.cbxbaurate = new System.Windows.Forms.ComboBox();
+            this.cbxComport = new System.Windows.Forms.ComboBox();
+            this.serialPort1 = new System.IO.Ports.SerialPort(this.components);
+            this.serialPort2 = new System.IO.Ports.SerialPort(this.components);
             this.tabControl1.SuspendLayout();
             this.Search.SuspendLayout();
             this.ACTION.SuspendLayout();
@@ -131,7 +120,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
-            this.menuStrip1.SuspendLayout();
             this.tabPage4.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -824,87 +812,6 @@
             this.station21.Text = "Station 21";
             this.station21.UseVisualStyleBackColor = false;
             // 
-            // menuStrip1
-            // 
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.fileToolStripMenuItem,
-            this.connectToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1088, 24);
-            this.menuStrip1.TabIndex = 3;
-            this.menuStrip1.Text = "menuStrip1";
-            // 
-            // fileToolStripMenuItem
-            // 
-            this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripMenuItem4,
-            this.toolStripMenuItem5,
-            this.toolStripMenuItem6,
-            this.toolStripMenuItem7});
-            this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-            this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
-            this.fileToolStripMenuItem.Text = "File";
-            // 
-            // toolStripMenuItem4
-            // 
-            this.toolStripMenuItem4.Name = "toolStripMenuItem4";
-            this.toolStripMenuItem4.Size = new System.Drawing.Size(80, 22);
-            this.toolStripMenuItem4.Text = "1";
-            // 
-            // toolStripMenuItem5
-            // 
-            this.toolStripMenuItem5.Name = "toolStripMenuItem5";
-            this.toolStripMenuItem5.Size = new System.Drawing.Size(80, 22);
-            this.toolStripMenuItem5.Text = "2";
-            // 
-            // toolStripMenuItem6
-            // 
-            this.toolStripMenuItem6.Name = "toolStripMenuItem6";
-            this.toolStripMenuItem6.Size = new System.Drawing.Size(80, 22);
-            this.toolStripMenuItem6.Text = "3";
-            // 
-            // toolStripMenuItem7
-            // 
-            this.toolStripMenuItem7.Name = "toolStripMenuItem7";
-            this.toolStripMenuItem7.Size = new System.Drawing.Size(80, 22);
-            this.toolStripMenuItem7.Text = "4";
-            // 
-            // connectToolStripMenuItem
-            // 
-            this.connectToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.aToolStripMenuItem,
-            this.aToolStripMenuItem1,
-            this.aToolStripMenuItem2,
-            this.aToolStripMenuItem3});
-            this.connectToolStripMenuItem.Name = "connectToolStripMenuItem";
-            this.connectToolStripMenuItem.Size = new System.Drawing.Size(64, 20);
-            this.connectToolStripMenuItem.Text = "Connect";
-            // 
-            // aToolStripMenuItem
-            // 
-            this.aToolStripMenuItem.Name = "aToolStripMenuItem";
-            this.aToolStripMenuItem.Size = new System.Drawing.Size(86, 22);
-            this.aToolStripMenuItem.Text = "1a";
-            // 
-            // aToolStripMenuItem1
-            // 
-            this.aToolStripMenuItem1.Name = "aToolStripMenuItem1";
-            this.aToolStripMenuItem1.Size = new System.Drawing.Size(86, 22);
-            this.aToolStripMenuItem1.Text = "2a";
-            // 
-            // aToolStripMenuItem2
-            // 
-            this.aToolStripMenuItem2.Name = "aToolStripMenuItem2";
-            this.aToolStripMenuItem2.Size = new System.Drawing.Size(86, 22);
-            this.aToolStripMenuItem2.Text = "3a";
-            // 
-            // aToolStripMenuItem3
-            // 
-            this.aToolStripMenuItem3.Name = "aToolStripMenuItem3";
-            this.aToolStripMenuItem3.Size = new System.Drawing.Size(86, 22);
-            this.aToolStripMenuItem3.Text = "4a";
-            // 
             // tabPage1
             // 
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
@@ -955,40 +862,41 @@
             this.tabPage4.Text = "tabPage4";
             this.tabPage4.UseVisualStyleBackColor = true;
             // 
-            // cbxComport
+            // textBox2
             // 
-            this.cbxComport.FormattingEnabled = true;
-            this.cbxComport.Location = new System.Drawing.Point(48, 19);
-            this.cbxComport.Name = "cbxComport";
-            this.cbxComport.Size = new System.Drawing.Size(141, 21);
-            this.cbxComport.TabIndex = 0;
+            this.textBox2.Location = new System.Drawing.Point(402, 310);
+            this.textBox2.Multiline = true;
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(225, 227);
+            this.textBox2.TabIndex = 2;
             // 
-            // cbxbaurate
+            // btnCB
             // 
-            this.cbxbaurate.FormattingEnabled = true;
-            this.cbxbaurate.Location = new System.Drawing.Point(48, 46);
-            this.cbxbaurate.Name = "cbxbaurate";
-            this.cbxbaurate.Size = new System.Drawing.Size(141, 21);
-            this.cbxbaurate.TabIndex = 0;
+            this.btnCB.Location = new System.Drawing.Point(243, 315);
+            this.btnCB.Name = "btnCB";
+            this.btnCB.Size = new System.Drawing.Size(94, 56);
+            this.btnCB.TabIndex = 1;
+            this.btnCB.Text = "ConnectB";
+            this.btnCB.UseVisualStyleBackColor = true;
             // 
-            // cbxdatabit
+            // textBox1
             // 
-            this.cbxdatabit.FormattingEnabled = true;
-            this.cbxdatabit.Location = new System.Drawing.Point(48, 73);
-            this.cbxdatabit.Name = "cbxdatabit";
-            this.cbxdatabit.Size = new System.Drawing.Size(141, 21);
-            this.cbxdatabit.TabIndex = 0;
+            this.textBox1.Location = new System.Drawing.Point(402, 32);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(225, 227);
+            this.textBox1.TabIndex = 2;
             // 
-            // cbxstopbit
+            // cbxparityB
             // 
-            this.cbxstopbit.FormattingEnabled = true;
-            this.cbxstopbit.Items.AddRange(new object[] {
-            "1",
-            "2"});
-            this.cbxstopbit.Location = new System.Drawing.Point(48, 100);
-            this.cbxstopbit.Name = "cbxstopbit";
-            this.cbxstopbit.Size = new System.Drawing.Size(141, 21);
-            this.cbxstopbit.TabIndex = 0;
+            this.cbxparityB.FormattingEnabled = true;
+            this.cbxparityB.Items.AddRange(new object[] {
+            "None",
+            "even"});
+            this.cbxparityB.Location = new System.Drawing.Point(48, 405);
+            this.cbxparityB.Name = "cbxparityB";
+            this.cbxparityB.Size = new System.Drawing.Size(141, 21);
+            this.cbxparityB.TabIndex = 0;
             // 
             // btnCA
             // 
@@ -999,13 +907,16 @@
             this.btnCA.Text = "ConnectA";
             this.btnCA.UseVisualStyleBackColor = true;
             // 
-            // textBox1
+            // cbxStopB
             // 
-            this.textBox1.Location = new System.Drawing.Point(402, 32);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(225, 227);
-            this.textBox1.TabIndex = 2;
+            this.cbxStopB.FormattingEnabled = true;
+            this.cbxStopB.Items.AddRange(new object[] {
+            "1",
+            "2"});
+            this.cbxStopB.Location = new System.Drawing.Point(48, 378);
+            this.cbxStopB.Name = "cbxStopB";
+            this.cbxStopB.Size = new System.Drawing.Size(141, 21);
+            this.cbxStopB.TabIndex = 0;
             // 
             // cbxparity
             // 
@@ -1018,13 +929,27 @@
             this.cbxparity.Size = new System.Drawing.Size(141, 21);
             this.cbxparity.TabIndex = 0;
             // 
-            // cbxcomB
+            // cbxdataB
             // 
-            this.cbxcomB.FormattingEnabled = true;
-            this.cbxcomB.Location = new System.Drawing.Point(48, 297);
-            this.cbxcomB.Name = "cbxcomB";
-            this.cbxcomB.Size = new System.Drawing.Size(141, 21);
-            this.cbxcomB.TabIndex = 0;
+            this.cbxdataB.FormattingEnabled = true;
+            this.cbxdataB.Items.AddRange(new object[] {
+            "7",
+            "8"});
+            this.cbxdataB.Location = new System.Drawing.Point(48, 351);
+            this.cbxdataB.Name = "cbxdataB";
+            this.cbxdataB.Size = new System.Drawing.Size(141, 21);
+            this.cbxdataB.TabIndex = 0;
+            // 
+            // cbxstopbit
+            // 
+            this.cbxstopbit.FormattingEnabled = true;
+            this.cbxstopbit.Items.AddRange(new object[] {
+            "1",
+            "2"});
+            this.cbxstopbit.Location = new System.Drawing.Point(48, 100);
+            this.cbxstopbit.Name = "cbxstopbit";
+            this.cbxstopbit.Size = new System.Drawing.Size(141, 21);
+            this.cbxstopbit.TabIndex = 0;
             // 
             // cbxBauB
             // 
@@ -1039,64 +964,52 @@
             this.cbxBauB.Size = new System.Drawing.Size(141, 21);
             this.cbxBauB.TabIndex = 0;
             // 
-            // cbxdataB
+            // cbxdatabit
             // 
-            this.cbxdataB.FormattingEnabled = true;
-            this.cbxdataB.Items.AddRange(new object[] {
+            this.cbxdatabit.FormattingEnabled = true;
+            this.cbxdatabit.Items.AddRange(new object[] {
             "7",
             "8"});
-            this.cbxdataB.Location = new System.Drawing.Point(48, 351);
-            this.cbxdataB.Name = "cbxdataB";
-            this.cbxdataB.Size = new System.Drawing.Size(141, 21);
-            this.cbxdataB.TabIndex = 0;
+            this.cbxdatabit.Location = new System.Drawing.Point(48, 73);
+            this.cbxdatabit.Name = "cbxdatabit";
+            this.cbxdatabit.Size = new System.Drawing.Size(141, 21);
+            this.cbxdatabit.TabIndex = 0;
             // 
-            // cbxStopB
+            // cbxcomB
             // 
-            this.cbxStopB.FormattingEnabled = true;
-            this.cbxStopB.Items.AddRange(new object[] {
-            "1",
-            "2"});
-            this.cbxStopB.Location = new System.Drawing.Point(48, 378);
-            this.cbxStopB.Name = "cbxStopB";
-            this.cbxStopB.Size = new System.Drawing.Size(141, 21);
-            this.cbxStopB.TabIndex = 0;
+            this.cbxcomB.FormattingEnabled = true;
+            this.cbxcomB.Location = new System.Drawing.Point(48, 297);
+            this.cbxcomB.Name = "cbxcomB";
+            this.cbxcomB.Size = new System.Drawing.Size(141, 21);
+            this.cbxcomB.TabIndex = 0;
             // 
-            // cbxparityB
+            // cbxbaurate
             // 
-            this.cbxparityB.FormattingEnabled = true;
-            this.cbxparityB.Items.AddRange(new object[] {
-            "None",
-            "even"});
-            this.cbxparityB.Location = new System.Drawing.Point(48, 405);
-            this.cbxparityB.Name = "cbxparityB";
-            this.cbxparityB.Size = new System.Drawing.Size(141, 21);
-            this.cbxparityB.TabIndex = 0;
+            this.cbxbaurate.FormattingEnabled = true;
+            this.cbxbaurate.Items.AddRange(new object[] {
+            "9600",
+            "19200",
+            "38400",
+            "115200"});
+            this.cbxbaurate.Location = new System.Drawing.Point(48, 46);
+            this.cbxbaurate.Name = "cbxbaurate";
+            this.cbxbaurate.Size = new System.Drawing.Size(141, 21);
+            this.cbxbaurate.TabIndex = 0;
             // 
-            // btnCB
+            // cbxComport
             // 
-            this.btnCB.Location = new System.Drawing.Point(243, 315);
-            this.btnCB.Name = "btnCB";
-            this.btnCB.Size = new System.Drawing.Size(94, 56);
-            this.btnCB.TabIndex = 1;
-            this.btnCB.Text = "ConnectB";
-            this.btnCB.UseVisualStyleBackColor = true;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(402, 310);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(225, 227);
-            this.textBox2.TabIndex = 2;
+            this.cbxComport.FormattingEnabled = true;
+            this.cbxComport.Location = new System.Drawing.Point(48, 19);
+            this.cbxComport.Name = "cbxComport";
+            this.cbxComport.Size = new System.Drawing.Size(141, 21);
+            this.cbxComport.TabIndex = 0;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1088, 629);
-            this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.tabControl1);
-            this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
             this.Text = "Form1";
             this.tabControl1.ResumeLayout(false);
@@ -1112,12 +1025,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
             this.tabPage4.ResumeLayout(false);
             this.tabPage4.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -1186,17 +1096,6 @@
         private System.Windows.Forms.Button station21;
         private System.IO.Ports.SerialPort serialPort1;
         private System.IO.Ports.SerialPort serialPort2;
-        private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem connectToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem4;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem5;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem6;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem7;
-        private System.Windows.Forms.ToolStripMenuItem aToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem aToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem aToolStripMenuItem2;
-        private System.Windows.Forms.ToolStripMenuItem aToolStripMenuItem3;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.TabPage tabPage3;

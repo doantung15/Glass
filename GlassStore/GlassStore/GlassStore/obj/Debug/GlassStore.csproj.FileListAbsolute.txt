@@ -52,3 +52,30 @@ D:\DONT TOUCH\New folder (2)\GlassStore\GlassStore\GlassStore\obj\Debug\GlassSto
 D:\DONT TOUCH\New folder (2)\GlassStore\GlassStore\GlassStore\obj\Debug\GlassStore.pdb
 D:\DONT TOUCH\New folder (2)\GlassStore\GlassStore\GlassStore\bin\Debug\Z.Dapper.Plus.dll
 D:\DONT TOUCH\New folder (2)\GlassStore\GlassStore\GlassStore\bin\Debug\Z.Dapper.Plus.xml
+C:\GitGlass\Glass\GlassStore\GlassStore\GlassStore\obj\Debug\GlassStore.csprojAssemblyReference.cache
+C:\GitGlass\Glass\GlassStore\GlassStore\GlassStore\obj\Debug\GlassStore.Form1.resources
+C:\GitGlass\Glass\GlassStore\GlassStore\GlassStore\obj\Debug\GlassStore.Properties.Resources.resources
+C:\GitGlass\Glass\GlassStore\GlassStore\GlassStore\obj\Debug\GlassStore.csproj.GenerateResource.cache
+C:\GitGlass\Glass\GlassStore\GlassStore\GlassStore\obj\Debug\GlassStore.csproj.CoreCompileInputs.cache
+C:\GitGlass\Glass\GlassStore\GlassStore\GlassStore\obj\Debug\GlassStore.exe
+C:\GitGlass\Glass\GlassStore\GlassStore\GlassStore\obj\Debug\GlassStore.pdb
+C:\GitGlass\Glass\GlassStore\GlassStore\GlassStore\bin\Debug\GlassStore.exe.config
+C:\GitGlass\Glass\GlassStore\GlassStore\GlassStore\bin\Debug\GlassStore.exe
+C:\GitGlass\Glass\GlassStore\GlassStore\GlassStore\bin\Debug\GlassStore.pdb
+C:\GitGlass\Glass\GlassStore\GlassStore\GlassStore\bin\Debug\EPPlus.dll
+C:\GitGlass\Glass\GlassStore\GlassStore\GlassStore\bin\Debug\ExcelDataReader.DataSet.dll
+C:\GitGlass\Glass\GlassStore\GlassStore\GlassStore\bin\Debug\ExcelDataReader.dll
+C:\GitGlass\Glass\GlassStore\GlassStore\GlassStore\bin\Debug\NModbus.dll
+C:\GitGlass\Glass\GlassStore\GlassStore\GlassStore\bin\Debug\System.IO.Ports.dll
+C:\GitGlass\Glass\GlassStore\GlassStore\GlassStore\bin\Debug\Z.Dapper.Plus.dll
+C:\GitGlass\Glass\GlassStore\GlassStore\GlassStore\bin\Debug\EPPlus.xml
+C:\GitGlass\Glass\GlassStore\GlassStore\GlassStore\bin\Debug\ExcelDataReader.pdb
+C:\GitGlass\Glass\GlassStore\GlassStore\GlassStore\bin\Debug\ExcelDataReader.xml
+C:\GitGlass\Glass\GlassStore\GlassStore\GlassStore\bin\Debug\ExcelDataReader.DataSet.pdb
+C:\GitGlass\Glass\GlassStore\GlassStore\GlassStore\bin\Debug\ExcelDataReader.DataSet.xml
+C:\GitGlass\Glass\GlassStore\GlassStore\GlassStore\bin\Debug\NModbus.xml
+C:\GitGlass\Glass\GlassStore\GlassStore\GlassStore\bin\Debug\NModbus.Serial.pdb
+C:\GitGlass\Glass\GlassStore\GlassStore\GlassStore\bin\Debug\NModbus.Serial.xml
+C:\GitGlass\Glass\GlassStore\GlassStore\GlassStore\bin\Debug\System.IO.Ports.xml
+C:\GitGlass\Glass\GlassStore\GlassStore\GlassStore\bin\Debug\Z.Dapper.Plus.xml
+C:\GitGlass\Glass\GlassStore\GlassStore\GlassStore\obj\Debug\GlassStore.csproj.CopyComplete

@@ -11,6 +11,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.OleDb;
 using NModbus.Serial;
+using System.IO;
+
 namespace GlassStore
 {
     public partial class Form1 : Form
