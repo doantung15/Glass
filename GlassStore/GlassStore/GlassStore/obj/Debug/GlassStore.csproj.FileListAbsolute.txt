@@ -1,0 +1,54 @@
+C:\Users\Admin\Desktop\GlassStore\GlassStore\GlassStore\bin\Debug\GlassStore.exe.config
+C:\Users\Admin\Desktop\GlassStore\GlassStore\GlassStore\bin\Debug\GlassStore.exe
+C:\Users\Admin\Desktop\GlassStore\GlassStore\GlassStore\bin\Debug\GlassStore.pdb
+C:\Users\Admin\Desktop\GlassStore\GlassStore\GlassStore\obj\Debug\GlassStore.csprojAssemblyReference.cache
+C:\Users\Admin\Desktop\GlassStore\GlassStore\GlassStore\obj\Debug\GlassStore.Properties.Resources.resources
+C:\Users\Admin\Desktop\GlassStore\GlassStore\GlassStore\obj\Debug\GlassStore.csproj.GenerateResource.cache
+C:\Users\Admin\Desktop\GlassStore\GlassStore\GlassStore\obj\Debug\GlassStore.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Desktop\GlassStore\GlassStore\GlassStore\obj\Debug\GlassStore.exe
+C:\Users\Admin\Desktop\GlassStore\GlassStore\GlassStore\obj\Debug\GlassStore.pdb
+C:\Users\Admin\Desktop\GlassStore\GlassStore\GlassStore\obj\Debug\GlassStore.csproj.CopyComplete
+C:\Users\Admin\Desktop\GlassStore\GlassStore\GlassStore\bin\Debug\NModbus.dll
+C:\Users\Admin\Desktop\GlassStore\GlassStore\GlassStore\bin\Debug\NModbus.xml
+C:\Users\Admin\Desktop\GlassStore\GlassStore\GlassStore\bin\Debug\NModbus.Serial.dll
+C:\Users\Admin\Desktop\GlassStore\GlassStore\GlassStore\bin\Debug\System.IO.Ports.dll
+C:\Users\Admin\Desktop\GlassStore\GlassStore\GlassStore\bin\Debug\NModbus.Serial.pdb
+C:\Users\Admin\Desktop\GlassStore\GlassStore\GlassStore\bin\Debug\NModbus.Serial.xml
+C:\Users\Admin\Desktop\GlassStore\GlassStore\GlassStore\bin\Debug\System.IO.Ports.xml
+C:\Users\Admin\Desktop\GlassStore\GlassStore\GlassStore\obj\Debug\GlassStore.Form1.resources
+C:\Users\Admin\Desktop\GlassStore\GlassStore\GlassStore\bin\Debug\EPPlus.dll
+C:\Users\Admin\Desktop\GlassStore\GlassStore\GlassStore\bin\Debug\ExcelDataReader.DataSet.dll
+C:\Users\Admin\Desktop\GlassStore\GlassStore\GlassStore\bin\Debug\ExcelDataReader.dll
+C:\Users\Admin\Desktop\GlassStore\GlassStore\GlassStore\bin\Debug\EPPlus.xml
+C:\Users\Admin\Desktop\GlassStore\GlassStore\GlassStore\bin\Debug\ExcelDataReader.pdb
+C:\Users\Admin\Desktop\GlassStore\GlassStore\GlassStore\bin\Debug\ExcelDataReader.xml
+C:\Users\Admin\Desktop\GlassStore\GlassStore\GlassStore\bin\Debug\ExcelDataReader.DataSet.pdb
+C:\Users\Admin\Desktop\GlassStore\GlassStore\GlassStore\bin\Debug\ExcelDataReader.DataSet.xml
+D:\DONT TOUCH\New folder (2)\GlassStore\GlassStore\GlassStore\bin\Debug\GlassStore.exe.config
+D:\DONT TOUCH\New folder (2)\GlassStore\GlassStore\GlassStore\bin\Debug\GlassStore.exe
+D:\DONT TOUCH\New folder (2)\GlassStore\GlassStore\GlassStore\bin\Debug\GlassStore.pdb
+D:\DONT TOUCH\New folder (2)\GlassStore\GlassStore\GlassStore\bin\Debug\EPPlus.dll
+D:\DONT TOUCH\New folder (2)\GlassStore\GlassStore\GlassStore\bin\Debug\ExcelDataReader.DataSet.dll
+D:\DONT TOUCH\New folder (2)\GlassStore\GlassStore\GlassStore\bin\Debug\ExcelDataReader.dll
+D:\DONT TOUCH\New folder (2)\GlassStore\GlassStore\GlassStore\bin\Debug\NModbus.dll
+D:\DONT TOUCH\New folder (2)\GlassStore\GlassStore\GlassStore\bin\Debug\NModbus.Serial.dll
+D:\DONT TOUCH\New folder (2)\GlassStore\GlassStore\GlassStore\bin\Debug\System.IO.Ports.dll
+D:\DONT TOUCH\New folder (2)\GlassStore\GlassStore\GlassStore\bin\Debug\EPPlus.xml
+D:\DONT TOUCH\New folder (2)\GlassStore\GlassStore\GlassStore\bin\Debug\ExcelDataReader.pdb
+D:\DONT TOUCH\New folder (2)\GlassStore\GlassStore\GlassStore\bin\Debug\ExcelDataReader.xml
+D:\DONT TOUCH\New folder (2)\GlassStore\GlassStore\GlassStore\bin\Debug\ExcelDataReader.DataSet.pdb
+D:\DONT TOUCH\New folder (2)\GlassStore\GlassStore\GlassStore\bin\Debug\ExcelDataReader.DataSet.xml
+D:\DONT TOUCH\New folder (2)\GlassStore\GlassStore\GlassStore\bin\Debug\NModbus.xml
+D:\DONT TOUCH\New folder (2)\GlassStore\GlassStore\GlassStore\bin\Debug\NModbus.Serial.pdb
+D:\DONT TOUCH\New folder (2)\GlassStore\GlassStore\GlassStore\bin\Debug\NModbus.Serial.xml
+D:\DONT TOUCH\New folder (2)\GlassStore\GlassStore\GlassStore\bin\Debug\System.IO.Ports.xml
+D:\DONT TOUCH\New folder (2)\GlassStore\GlassStore\GlassStore\obj\Debug\GlassStore.csprojAssemblyReference.cache
+D:\DONT TOUCH\New folder (2)\GlassStore\GlassStore\GlassStore\obj\Debug\GlassStore.Form1.resources
+D:\DONT TOUCH\New folder (2)\GlassStore\GlassStore\GlassStore\obj\Debug\GlassStore.Properties.Resources.resources
+D:\DONT TOUCH\New folder (2)\GlassStore\GlassStore\GlassStore\obj\Debug\GlassStore.csproj.GenerateResource.cache
+D:\DONT TOUCH\New folder (2)\GlassStore\GlassStore\GlassStore\obj\Debug\GlassStore.csproj.CoreCompileInputs.cache
+D:\DONT TOUCH\New folder (2)\GlassStore\GlassStore\GlassStore\obj\Debug\GlassStore.csproj.CopyComplete
+D:\DONT TOUCH\New folder (2)\GlassStore\GlassStore\GlassStore\obj\Debug\GlassStore.exe
+D:\DONT TOUCH\New folder (2)\GlassStore\GlassStore\GlassStore\obj\Debug\GlassStore.pdb
+D:\DONT TOUCH\New folder (2)\GlassStore\GlassStore\GlassStore\bin\Debug\Z.Dapper.Plus.dll
+D:\DONT TOUCH\New folder (2)\GlassStore\GlassStore\GlassStore\bin\Debug\Z.Dapper.Plus.xml
