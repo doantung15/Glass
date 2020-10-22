@@ -111,6 +111,8 @@
             this.serialPort1 = new System.IO.Ports.SerialPort(this.components);
             this.serialPort2 = new System.IO.Ports.SerialPort(this.components);
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.BTNDIS = new System.Windows.Forms.Button();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.tabControl1.SuspendLayout();
             this.Search.SuspendLayout();
             this.ACTION.SuspendLayout();
@@ -842,6 +844,7 @@
             // 
             // tabPage4
             // 
+            this.tabPage4.Controls.Add(this.BTNDIS);
             this.tabPage4.Controls.Add(this.txbShowB);
             this.tabPage4.Controls.Add(this.btnCB);
             this.tabPage4.Controls.Add(this.txbShowA);
@@ -930,6 +933,7 @@
             this.cbxparity.Name = "cbxparity";
             this.cbxparity.Size = new System.Drawing.Size(141, 21);
             this.cbxparity.TabIndex = 0;
+            this.cbxparity.Text = "None";
             // 
             // cbxdataB
             // 
@@ -952,6 +956,7 @@
             this.cbxstopbit.Name = "cbxstopbit";
             this.cbxstopbit.Size = new System.Drawing.Size(141, 21);
             this.cbxstopbit.TabIndex = 0;
+            this.cbxstopbit.Text = "1";
             // 
             // cbxBauB
             // 
@@ -976,6 +981,7 @@
             this.cbxdatabit.Name = "cbxdatabit";
             this.cbxdatabit.Size = new System.Drawing.Size(141, 21);
             this.cbxdatabit.TabIndex = 0;
+            this.cbxdatabit.Text = "8";
             // 
             // cbxcomB
             // 
@@ -997,6 +1003,7 @@
             this.cbxbaurate.Name = "cbxbaurate";
             this.cbxbaurate.Size = new System.Drawing.Size(141, 21);
             this.cbxbaurate.TabIndex = 0;
+            this.cbxbaurate.Text = "9600";
             // 
             // cbxComport
             // 
@@ -1008,7 +1015,22 @@
             // 
             // timer1
             // 
+            this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // BTNDIS
+            // 
+            this.BTNDIS.Location = new System.Drawing.Point(248, 116);
+            this.BTNDIS.Name = "BTNDIS";
+            this.BTNDIS.Size = new System.Drawing.Size(88, 66);
+            this.BTNDIS.TabIndex = 3;
+            this.BTNDIS.Text = "DIS";
+            this.BTNDIS.UseVisualStyleBackColor = true;
+            this.BTNDIS.Click += new System.EventHandler(this.BTNDIS_Click);
+            // 
+            // backgroundWorker1
+            // 
+            this.backgroundWorker1.DoWork += new System.ComponentModel.DoWorkEventHandler(this.backgroundWorker1_DoWork);
             // 
             // Form1
             // 
@@ -1121,6 +1143,8 @@
         private System.Windows.Forms.ComboBox cbxBauB;
         private System.Windows.Forms.ComboBox cbxcomB;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Button BTNDIS;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
     }
 }
 

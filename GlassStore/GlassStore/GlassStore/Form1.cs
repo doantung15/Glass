@@ -8,6 +8,7 @@ using System.IO.Ports;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Threading;
 using System.Windows.Forms;
 using System.Data.OleDb;
 using NModbus.Serial;
@@ -21,12 +22,15 @@ namespace GlassStore
 
         DataTableCollection tableCollection;
         StringBuilder data = new StringBuilder();
-        IModbusSlave slave;
-        IModbusMaster master;
+        IModbusSerialMaster master;
+        
+
+
         public Form1()
         {
             InitializeComponent();
             Comport();
+            
         }
 
         private void Comport()
@@ -34,6 +38,8 @@ namespace GlassStore
             string[] ports = SerialPort.GetPortNames();
             cbxComport.Items.AddRange (ports);
         }
+        
+                     
         private void OpenComport_Aduino()
         {
  
@@ -45,29 +51,41 @@ namespace GlassStore
                 {
                     serialPort1.PortName = cbxComport.Text;
                     serialPort1.BaudRate = Convert.ToInt32(cbxbaurate.Text);
-                    //serialPort1.DataBits = Convert.ToInt32(cbxdatabit.Text);
-                    //serialPort1.StopBits = (StopBits)Enum.Parse(typeof(StopBits), cbxstopbit.Text);
-                    //serialPort1.Parity = (Parity)Enum.Parse(typeof(Parity), cbxparity.Text);
-                    serialPort1.WriteTimeout = 500;
-                    serialPort1.ReadTimeout = 500;
+                    serialPort1.DataBits = Convert.ToInt32(cbxdatabit.Text);
+                    serialPort1.StopBits = (StopBits)Enum.Parse(typeof(StopBits), cbxstopbit.Text);
+                    serialPort1.Parity = (Parity)Enum.Parse(typeof(Parity), cbxparity.Text);
+                    //serialPort1.ReadTimeout = 1000;
 
                     serialPort1.Open();
                     var factory = new ModbusFactory();
-                    IModbusMaster master = factory.CreateRtuMaster(serialPort1);
-
-
+                    master = factory.CreateRtuMaster(serialPort1);
+                 
+                    
                 }
 
         }
 
         private void Modbus(byte slaveId,ushort startAddress,ushort numRegisters)
-        {            
-            ushort[] registers = master.ReadHoldingRegisters(slaveId, startAddress, numRegisters);
+        {
 
-            for (int i = 0; i < numRegisters; i++)
+            try
             {
-               data.Append($"Register {startAddress + i}={registers[i]}");
+                ushort[] registers = master.ReadHoldingRegisters(slaveId, startAddress, numRegisters);
+                data.Clear();
+                for (int i = 0; i < numRegisters; i++)
+                {
+                    data.Append($"Register {startAddress + i}={registers[i]}");
+                }
+                txbShowA.Text = Convert.ToString(data);
             }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+        void modbus1()
+        {
+            Modbus(3, 0, 10);
         }
 
         private void OpenComport_BarcodeGun()
@@ -129,17 +147,30 @@ namespace GlassStore
 
         private void btnCA_Click(object sender, EventArgs e)
         {
-
-            OpenComport_Aduino();
             
+            OpenComport_Aduino();                        
+            timer1.Enabled = true;
             
-
         }
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            Modbus(3, 0, 10);
-            txbShowA.Text = Convert.ToString(data);
+            ThreadStart ts = new ThreadStart(modbus1);
+            Thread thrd = new Thread(ts);
+            thrd.Start();
+            
+            
+        }
+
+        private void BTNDIS_Click(object sender, EventArgs e)
+        {
+            serialPort1.Close();
+            timer1.Enabled = false;
+        }
+
+        private void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
+        {
+            
         }
     }
 }
