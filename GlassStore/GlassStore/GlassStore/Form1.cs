@@ -23,14 +23,19 @@ namespace GlassStore
         DataTableCollection tableCollection;
         StringBuilder data = new StringBuilder();
         IModbusSerialMaster master;
-        
+        Thread thrd;
+      
 
+       
+
+   
 
         public Form1()
         {
             InitializeComponent();
             Comport();
-            
+            Control.CheckForIllegalCrossThreadCalls = false;
+
         }
 
         private void Comport()
@@ -155,22 +160,24 @@ namespace GlassStore
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            ThreadStart ts = new ThreadStart(modbus1);
-            Thread thrd = new Thread(ts);
+            thrd = new Thread(modbus1);
+            thrd.IsBackground = true;
             thrd.Start();
-            
-            
+                                  
         }
-
+        
         private void BTNDIS_Click(object sender, EventArgs e)
         {
             serialPort1.Close();
             timer1.Enabled = false;
+            
         }
 
         private void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
         {
             
         }
+
+
     }
 }
