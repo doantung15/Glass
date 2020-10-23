@@ -34,7 +34,7 @@ namespace GlassStore
 
             
 
-            string connStr = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + "C:\\Users\\Admin\\Desktop\\GlassStore\\Book2.xlsx" + ";Extended Properties=Excel 12.0;";
+            string connStr = "Provider=Microsoft.ACE.OLEDB.8.0;Data Source=" + "D:\\glass24.5.2020\\Book2.xlsx" + ";Extended Properties=Excel 12.0;";
 
             using (OleDbConnection conn = new OleDbConnection(connStr))
             {
@@ -45,6 +45,8 @@ namespace GlassStore
                 myDataAdapter.Fill(zDataAll);
 
             }
+
+            
         }
 
 

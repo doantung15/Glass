@@ -24,10 +24,14 @@ namespace GlassStore
         StringBuilder data = new StringBuilder();
         IModbusSerialMaster master;
         Thread thrd;
-      
-
+        Thread thrd1;
+        
        
-
+        private void mobang()
+        {
+            Dulieu.InitDataTable();
+            dataGridView2.DataSource = Dulieu.zDataAll;
+        }
    
 
         public Form1()
@@ -35,7 +39,7 @@ namespace GlassStore
             InitializeComponent();
             Comport();
             Control.CheckForIllegalCrossThreadCalls = false;
-
+            
         }
 
         private void Comport()
@@ -79,7 +83,8 @@ namespace GlassStore
                 data.Clear();
                 for (int i = 0; i < numRegisters; i++)
                 {
-                    data.Append($"Register {startAddress + i}={registers[i]}");
+                    data.Append(registers[i]);
+                    //data.Append($"Register {startAddress + i}={registers[i]}");
                 }
                 txbShowA.Text = Convert.ToString(data);
             }
@@ -147,7 +152,7 @@ namespace GlassStore
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             DataTable dt = tableCollection[comboBox1.SelectedItem.ToString()];
-            dataGridView2.DataSource = dt;
+            dataGridView1.DataSource = dt;
         }
 
         private void btnCA_Click(object sender, EventArgs e)
@@ -160,8 +165,10 @@ namespace GlassStore
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            thrd = new Thread(modbus1);
-            thrd.IsBackground = true;
+            thrd = new Thread(modbus1)
+            {
+                IsBackground = true
+            };
             thrd.Start();
                                   
         }
@@ -178,6 +185,18 @@ namespace GlassStore
             
         }
 
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            //timer2.Enabled = true;
+            mobang();
+        }
 
+        private void timer2_Tick(object sender, EventArgs e)
+        {
+            thrd1 = new Thread(Dulieu.InitDataTable);
+            //thrd1 = new Thread()
+            thrd1.IsBackground = true;
+            thrd1.Start();
+        }
     }
 }

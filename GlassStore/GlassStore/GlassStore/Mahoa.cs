@@ -11,6 +11,9 @@ namespace GlassStore
         public static bool[] a = new bool[48];
         public static bool[] b = new bool[8];
         public static int count = 0;
+
+        public static Int64 BiaWia;
+
         public static bool IsNumber(string pValue)
         {
             foreach (Char c in pValue)
