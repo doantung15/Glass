@@ -32,9 +32,9 @@ namespace GlassStore
             DataColumn zPos = new DataColumn("Pos");
             zDataAll.Columns.Add(zPos);
 
-            
 
-            string connStr = "Provider=Microsoft.ACE.OLEDB.8.0;Data Source=" + "D:\\glass24.5.2020\\Book2.xlsx" + ";Extended Properties=Excel 12.0;";
+
+            string connStr = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + "D:\\glass24.5.2020\\Book2.xlsx" + ";Extended Properties=Excel 12.0;";
 
             using (OleDbConnection conn = new OleDbConnection(connStr))
             {
@@ -46,7 +46,7 @@ namespace GlassStore
 
             }
 
-            
+
         }
 
 
@@ -79,6 +79,19 @@ namespace GlassStore
                 
             }
         }
+
+        public static void phathienhang()
+        {
+            for (int i = 0; i < zDataAll.Rows.Count; i++)
+            {
+                if (zDataAll.Rows[i][1] != "")
+                {
+                    
+                }
+
+            }
+        }
+
 
         public static void HamChay()
         {

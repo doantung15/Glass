@@ -32,6 +32,7 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.Search = new System.Windows.Forms.TabPage();
             this.ACTION = new System.Windows.Forms.GroupBox();
+            this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.button8 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
@@ -133,9 +134,13 @@
             this.btnS2 = new System.Windows.Forms.Button();
             this.btnS1 = new System.Windows.Forms.Button();
             this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.btnSend = new System.Windows.Forms.Button();
             this.BTNDIS = new System.Windows.Forms.Button();
             this.txbShowB = new System.Windows.Forms.TextBox();
             this.btnCB = new System.Windows.Forms.Button();
+            this.txbSlaveId = new System.Windows.Forms.TextBox();
+            this.txBaddress = new System.Windows.Forms.TextBox();
+            this.txBSendData = new System.Windows.Forms.TextBox();
             this.txbShowA = new System.Windows.Forms.TextBox();
             this.cbxparityB = new System.Windows.Forms.ComboBox();
             this.btnCA = new System.Windows.Forms.Button();
@@ -153,7 +158,7 @@
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.timer2 = new System.Windows.Forms.Timer(this.components);
-            this.progressBar1 = new System.Windows.Forms.ProgressBar();
+            this.btnspecial = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.Search.SuspendLayout();
             this.ACTION.SuspendLayout();
@@ -213,6 +218,13 @@
             this.ACTION.TabIndex = 79;
             this.ACTION.TabStop = false;
             this.ACTION.Text = "ACTION";
+            // 
+            // progressBar1
+            // 
+            this.progressBar1.Location = new System.Drawing.Point(6, 19);
+            this.progressBar1.Name = "progressBar1";
+            this.progressBar1.Size = new System.Drawing.Size(83, 25);
+            this.progressBar1.TabIndex = 4;
             // 
             // button8
             // 
@@ -1237,9 +1249,14 @@
             // 
             // tabPage4
             // 
+            this.tabPage4.Controls.Add(this.btnspecial);
+            this.tabPage4.Controls.Add(this.btnSend);
             this.tabPage4.Controls.Add(this.BTNDIS);
             this.tabPage4.Controls.Add(this.txbShowB);
             this.tabPage4.Controls.Add(this.btnCB);
+            this.tabPage4.Controls.Add(this.txbSlaveId);
+            this.tabPage4.Controls.Add(this.txBaddress);
+            this.tabPage4.Controls.Add(this.txBSendData);
             this.tabPage4.Controls.Add(this.txbShowA);
             this.tabPage4.Controls.Add(this.cbxparityB);
             this.tabPage4.Controls.Add(this.btnCA);
@@ -1258,6 +1275,16 @@
             this.tabPage4.TabIndex = 4;
             this.tabPage4.Text = "tabPage4";
             this.tabPage4.UseVisualStyleBackColor = true;
+            // 
+            // btnSend
+            // 
+            this.btnSend.Location = new System.Drawing.Point(999, 34);
+            this.btnSend.Name = "btnSend";
+            this.btnSend.Size = new System.Drawing.Size(65, 33);
+            this.btnSend.TabIndex = 4;
+            this.btnSend.Text = "Send";
+            this.btnSend.UseVisualStyleBackColor = true;
+            this.btnSend.Click += new System.EventHandler(this.btnSend_Click);
             // 
             // BTNDIS
             // 
@@ -1285,6 +1312,27 @@
             this.btnCB.TabIndex = 1;
             this.btnCB.Text = "ConnectB";
             this.btnCB.UseVisualStyleBackColor = true;
+            // 
+            // txbSlaveId
+            // 
+            this.txbSlaveId.Location = new System.Drawing.Point(681, 32);
+            this.txbSlaveId.Name = "txbSlaveId";
+            this.txbSlaveId.Size = new System.Drawing.Size(100, 20);
+            this.txbSlaveId.TabIndex = 2;
+            // 
+            // txBaddress
+            // 
+            this.txBaddress.Location = new System.Drawing.Point(787, 32);
+            this.txBaddress.Name = "txBaddress";
+            this.txBaddress.Size = new System.Drawing.Size(100, 20);
+            this.txBaddress.TabIndex = 2;
+            // 
+            // txBSendData
+            // 
+            this.txBSendData.Location = new System.Drawing.Point(893, 32);
+            this.txBSendData.Name = "txBSendData";
+            this.txBSendData.Size = new System.Drawing.Size(100, 20);
+            this.txBSendData.TabIndex = 2;
             // 
             // txbShowA
             // 
@@ -1426,12 +1474,15 @@
             this.timer2.Interval = 10000;
             this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
             // 
-            // progressBar1
+            // btnspecial
             // 
-            this.progressBar1.Location = new System.Drawing.Point(6, 19);
-            this.progressBar1.Name = "progressBar1";
-            this.progressBar1.Size = new System.Drawing.Size(83, 25);
-            this.progressBar1.TabIndex = 4;
+            this.btnspecial.Location = new System.Drawing.Point(707, 104);
+            this.btnspecial.Name = "btnspecial";
+            this.btnspecial.Size = new System.Drawing.Size(102, 43);
+            this.btnspecial.TabIndex = 5;
+            this.btnspecial.Text = "special";
+            this.btnspecial.UseVisualStyleBackColor = true;
+            this.btnspecial.Click += new System.EventHandler(this.btnspecial_Click);
             // 
             // Form1
             // 
@@ -1591,6 +1642,11 @@
         private System.Windows.Forms.Button btnS1;
         private System.Windows.Forms.Timer timer2;
         private System.Windows.Forms.ProgressBar progressBar1;
+        private System.Windows.Forms.TextBox txBSendData;
+        private System.Windows.Forms.Button btnSend;
+        private System.Windows.Forms.TextBox txbSlaveId;
+        private System.Windows.Forms.TextBox txBaddress;
+        private System.Windows.Forms.Button btnspecial;
     }
 }
 

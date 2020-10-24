@@ -25,8 +25,9 @@ namespace GlassStore
         IModbusSerialMaster master;
         Thread thrd;
         Thread thrd1;
-        
-       
+        StringBuilder stt = new StringBuilder();
+
+        int a;
         private void mobang()
         {
             Dulieu.InitDataTable();
@@ -46,6 +47,7 @@ namespace GlassStore
         {
             string[] ports = SerialPort.GetPortNames();
             cbxComport.Items.AddRange (ports);
+            cbxcomB.Items.AddRange(ports);
         }
         
                      
@@ -74,7 +76,7 @@ namespace GlassStore
 
         }
 
-        private void Modbus(byte slaveId,ushort startAddress,ushort numRegisters)
+        private void ModbusRead(byte slaveId,ushort startAddress,ushort numRegisters)
         {
 
             try
@@ -83,19 +85,38 @@ namespace GlassStore
                 data.Clear();
                 for (int i = 0; i < numRegisters; i++)
                 {
-                    data.Append(registers[i]);
-                    //data.Append($"Register {startAddress + i}={registers[i]}");
+                    
+                    
+                    data.Append($"Register {startAddress + i}={registers[i].ToString("X")}" + "\r\n");
                 }
-                txbShowA.Text = Convert.ToString(data);
+                
+                
+                    txbShowA.Text = Convert.ToString(data);
+                
+
             }
             catch(Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
         }
+
+        private void ModbusTrasmit(byte slaveId,ushort startAddress,ushort[] numRegister)
+        {
+            try
+            {
+                master.WriteMultipleRegisters(slaveId, startAddress, numRegister);
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
         void modbus1()
         {
-            Modbus(3, 0, 10);
+            
+            ModbusRead(3, 0, 10);
         }
 
         private void OpenComport_BarcodeGun()
@@ -187,8 +208,9 @@ namespace GlassStore
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            //timer2.Enabled = true;
             mobang();
+            //timer2.Enabled = true;
+            
         }
 
         private void timer2_Tick(object sender, EventArgs e)
@@ -197,6 +219,40 @@ namespace GlassStore
             //thrd1 = new Thread()
             thrd1.IsBackground = true;
             thrd1.Start();
+        }
+
+        private void btnSend_Click(object sender, EventArgs e)
+        {
+            byte a = Convert.ToByte(txbSlaveId.Text);
+            ushort addr =Convert.ToUInt16(txBaddress.Text);
+            string ox = Convert.ToString(txBSendData.Text);
+            ox = ox.Replace(" ", "");
+            string[] mx = ox.Split(';');
+            ushort[] bbb = new ushort[10];
+            for(int i=0;i<mx.Length;i++)
+            {
+                bbb[i] = Convert.ToUInt16(mx[i]);
+            }                   
+                    
+
+            ModbusTrasmit(a, addr,bbb);
+
+        }
+
+        private void btnspecial_Click(object sender, EventArgs e)
+        {
+            
+            for (int i = 0; i < Dulieu.zDataAll.Rows.Count; i++)
+            {
+                Dulieu.zDataAll.Rows[i][1].ToString 
+                if (Dulieu.zDataAll.Rows[i][1] != "")
+                {
+                    a++;
+                }
+                else continue;
+
+            }
+            MessageBox.Show(Convert.ToString(a));
         }
     }
 }
