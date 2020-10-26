@@ -26,8 +26,8 @@ namespace GlassStore
         Thread thrd;
         Thread thrd1;
         StringBuilder stt = new StringBuilder();
-
-        int a;
+        List<string> k = new List<string>();
+        
         private void mobang()
         {
             Dulieu.InitDataTable();
@@ -241,18 +241,19 @@ namespace GlassStore
 
         private void btnspecial_Click(object sender, EventArgs e)
         {
-            
+
             for (int i = 0; i < Dulieu.zDataAll.Rows.Count; i++)
             {
-                Dulieu.zDataAll.Rows[i][1].ToString 
-                if (Dulieu.zDataAll.Rows[i][1] != "")
+                if (string.IsNullOrEmpty(Convert.ToString(Dulieu.zDataAll.Rows[i][1])))
                 {
-                    a++;
+                    
                 }
-                else continue;
-
+                else
+                {
+                    
+                }
             }
-            MessageBox.Show(Convert.ToString(a));
+            MessageBox.Show(Convert.ToString(k));
         }
     }
 }

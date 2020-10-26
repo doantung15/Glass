@@ -9,15 +9,9 @@ namespace GlassStore
 {
     class Dulieu
     {
-        public static int k;
         public static DataTable zDataAll = null;
         public static DataTable zdatasearch = null;
-        public static List<string> Ping = new List<string>();
-        public static List<string> PingNull = new List<string>();
-        public static List<string> diachi = new List<string>();
-        public static List<string> onho = new List<string>();
-        public static List<string> diachiNull = new List<string>();
-        public static List<string> onhoNull = new List<string>();
+  
 
         public static void InitDataTable()
         {
@@ -47,13 +41,7 @@ namespace GlassStore
             }
 
 
-        }
-
-
-        public static void hieuchinhgridview()
-        {
-
-        }
+        }        
 
 
         public static void Openfilesearch(string NameofFileExcel,string Sheet)
@@ -80,42 +68,9 @@ namespace GlassStore
             }
         }
 
-        public static void phathienhang()
-        {
-            for (int i = 0; i < zDataAll.Rows.Count; i++)
-            {
-                if (zDataAll.Rows[i][1] != "")
-                {
-                    
-                }
-
-            }
-        }
+       
 
 
-        public static void HamChay()
-        {
-            
-            for(int i=0; i < zDataAll.Rows.Count; i++)
-            {
-                if (zDataAll.Rows[i][1] != "")
-                {
-                    
-                }
-                
-            }
-
-            for(int k=0;k<Ping.Count;k++)
-            {
-                diachi.Add(Ping[k].Substring(1, 2));
-                onho.Add(Ping[k].Substring(4, 2));
-            }  
-            
-            for(int l=0;l<PingNull.Count;l++)
-            {
-                diachiNull.Add(PingNull[l].Substring(1, 2));
-                onhoNull.Add(PingNull[l].Substring(4, 2));
-            }
-        }
+       
     }
 }

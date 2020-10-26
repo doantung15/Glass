@@ -8,6 +8,7 @@ namespace GlassStore
 {
     class Mahoa
     {
+
         public static bool[] a = new bool[48];
         public static bool[] b = new bool[8];
         public static int count = 0;
@@ -24,40 +25,32 @@ namespace GlassStore
             return true;
         }
 
-       public static void Bitwise()
-        {          
-            
-            for(int i=0;i<Dulieu.diachi.Count;i++)
+        public static void addbit()
+        {
+            for (int i = 0; i < Dulieu.zDataAll.Rows.Count; i++)
             {
-                if(Dulieu.diachi[i]!=Dulieu.diachi[i+1])
+                if (string.IsNullOrEmpty(Convert.ToString(Dulieu.zDataAll.Rows[i][1])))
                 {
-                    break;
+                    BiaWia |= 0 << i;
                 }
                 else
                 {
-                    for(int k=0;k<Dulieu.onho.Count;k++)
-                    {
-                        a[Convert.ToInt16(Dulieu.onho[k])] = true;
-                    }                   
+                    BiaWia |= 1 << i;
                 }
             }
 
-            for(int j=0;j<Dulieu.diachiNull.Count;j++)
-            {
-                if (Dulieu.diachiNull[j] != Dulieu.diachiNull[j + 1])
-                {
-                    break;
-                }
-                else
-                {
-                    for(int m=0;m<Dulieu.onhoNull.Count;m++)
-                    {
-                        a[Convert.ToInt16(Dulieu.onhoNull[m])] = false;
-                    }
-                }
-            }
-            
         }
+
+        public static void tachdiachi_onho()
+        {
+            for(int a=0; a<Dulieu.zDataAll.Rows.Count;a++)
+            {
+              // Dulieu.zDataAll.Rows[i][2]= 
+            }
+        }
+
+
+       
 
         public static bool[] Phanhoa()
         {
