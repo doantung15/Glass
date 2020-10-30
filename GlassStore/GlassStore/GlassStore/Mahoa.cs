@@ -17,7 +17,8 @@ namespace GlassStore
         public static List<string> diachi = new List<string>();
         public static List<string> onho = new List<string>();
         public static StringBuilder ads = new StringBuilder();
-        
+        public static string m;
+        public static List<string> thongtinkho = new List<string>();
 
         public static bool IsNumber(string pValue)
         {
@@ -42,13 +43,20 @@ namespace GlassStore
                     ads.Append("1");
                 }
             }
-
-
+            m = Convert.ToString(ads);
+            for (int j = 0; j < ads.Length; j+=45)
+            {
+                thongtinkho.Add(Convert.ToString(m.Substring(j, 44)));
+            }
 
         }
 
+        
+        
+
         public static void tachdiachi_onho()
         {
+
             for (int i = 0; i < Dulieu.zDataAll.Rows.Count; i++)
             {
                 Position.Add(Dulieu.zDataAll.Rows[i][2].ToString());
@@ -67,6 +75,7 @@ namespace GlassStore
 
         public static bool[] Phanhoa()
         {
+
             while(count<a.Length)
             {
                 if (a.Length - count < b.Length)
@@ -79,6 +88,7 @@ namespace GlassStore
                 }
             }
             return b;
+
         }
 
 
