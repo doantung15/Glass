@@ -13,7 +13,11 @@ namespace GlassStore
         public static bool[] b = new bool[8];
         public static int count = 0;
 
-        public static Int64 BiaWia;
+        public static List<string> Position = new List<string>();
+        public static List<string> diachi = new List<string>();
+        public static List<string> onho = new List<string>();
+        public static StringBuilder ads = new StringBuilder();
+        
 
         public static bool IsNumber(string pValue)
         {
@@ -31,25 +35,34 @@ namespace GlassStore
             {
                 if (string.IsNullOrEmpty(Convert.ToString(Dulieu.zDataAll.Rows[i][1])))
                 {
-                    BiaWia |= 0 << i;
+                    ads.Append("0");
                 }
                 else
                 {
-                    BiaWia |= 1 << i;
+                    ads.Append("1");
                 }
             }
+
+
 
         }
 
         public static void tachdiachi_onho()
         {
-            for(int a=0; a<Dulieu.zDataAll.Rows.Count;a++)
+            for (int i = 0; i < Dulieu.zDataAll.Rows.Count; i++)
             {
-              // Dulieu.zDataAll.Rows[i][2]= 
+                Position.Add(Dulieu.zDataAll.Rows[i][2].ToString());
             }
+
+            for (int j = 0; j < Position.Count; j++)
+            {
+                diachi.Add(Convert.ToString(Position[j].Substring(1, 2)));
+                onho.Add(Convert.ToString(Position[j].Substring(4, 2)));
+            }
+            
         }
 
-
+       
        
 
         public static bool[] Phanhoa()
