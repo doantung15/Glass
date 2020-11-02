@@ -10,15 +10,16 @@ namespace GlassStore
     {
 
         public static bool[] a = new bool[48];
-        public static bool[] b = new bool[8];
+        public static bool[] b = new bool[16];
         public static int count = 0;
 
         public static List<string> Position = new List<string>();
         public static List<string> diachi = new List<string>();
         public static List<string> onho = new List<string>();
         public static StringBuilder ads = new StringBuilder();
-        public static string m;
+        public static int m;
         public static List<string> thongtinkho = new List<string>();
+        public static List<string> chiatungkho = new List<string>();
 
         public static bool IsNumber(string pValue)
         {
@@ -43,11 +44,13 @@ namespace GlassStore
                     ads.Append("1");
                 }
             }
-            m = Convert.ToString(ads);
-            for (int j = 0; j < ads.Length; j+=45)
+            
+            for (int j=0;j<=ads.Length;j+=45)
             {
-                thongtinkho.Add(Convert.ToString(m.Substring(j, 44)));
+                m++;
             }
+
+            
 
         }
 
@@ -94,12 +97,12 @@ namespace GlassStore
 
         
 
-        public static int Ma_hoa_8bit(bool[] cum)
+        public static int Ma_hoa_16bit(bool[] cum)
         {
                         
             int result1 = 2 ^ 2;
 
-            for (int i = 0; i < 8; i++)
+            for (int i = 0; i < 16; i++)
             {
                 result1 = result1 + (int)Math.Pow(2, i)*Convert.ToInt32(cum[i]);
             }

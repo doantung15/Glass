@@ -25,8 +25,8 @@ namespace GlassStore
         IModbusSerialMaster master;
         Thread thrd;
         Thread thrd1;
-        StringBuilder stt = new StringBuilder();
-        int k;
+        
+    
 
         
 
@@ -244,11 +244,9 @@ namespace GlassStore
         private void btnspecial_Click(object sender, EventArgs e)
         {
             Mahoa.addbit();
-            for (int i = 0; i < 30; i++)
-            {
-                stt.Append(Convert.ToString(Mahoa.thongtinkho[i])+ "\r\n");
-            }
-           
+            MessageBox.Show(Convert.ToString());
+
+
         }
     }
 }
